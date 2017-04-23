@@ -2,10 +2,12 @@ import './city.css';
 
 export const city = {
   template: require('./city.html'),
-  controller() {
+  controller(Api) {
+    'ngInject';
     this.searchUpdate = () => {
-      // eslint-disable-next-line
-      console.log(this.search);
+      Api.getCities(this.search).then(cities => {
+        this.cities = cities;
+      });
     };
   }
 };
