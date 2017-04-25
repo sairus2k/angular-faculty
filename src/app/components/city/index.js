@@ -1,5 +1,3 @@
-import './city.css';
-
 export const city = {
   template: require('./city.html'),
   controller(Api) {
