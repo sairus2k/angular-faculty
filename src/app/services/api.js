@@ -4,6 +4,7 @@ export function api($http) {
   const url = 'https://api.vk.com/method/database';
   return {
     getCities,
+    getCitiesById,
     getUniversities,
     getFaculties
   };
@@ -19,6 +20,15 @@ export function api($http) {
     }).then(response => response.data.response);
   }
 
+  function getCitiesById(id) {
+    return $http.jsonp(`${url}.${getCitiesById.name}`, {
+      params: {
+        // eslint-disable-next-line camelcase
+        city_ids: id
+      }
+    }).then(response => response.data.response);
+  }
+
   function getUniversities(q, cid) {
     return $http.jsonp(`${url}.${getUniversities.name}`, {
       params: {
@@ -26,7 +36,6 @@ export function api($http) {
         country_id: 1,
         // eslint-disable-next-line camelcase
         city_id: cid,
-        count: 5,
         q
       }
     }).then(response => response.data.response.splice(1));
@@ -39,7 +48,6 @@ export function api($http) {
         country_id: 1,
         // eslint-disable-next-line camelcase
         university_id: uid,
-        count: 5,
         q
       }
     }).then(response => response.data.response.splice(1));

@@ -17,5 +17,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('city.university.faculty', {
       url: ':universityId/',
       views: {'faculty@': {component: 'faculty'}}
+    })
+    .state('city.university.faculty.edit', {
+      url: ':facultyId',
+      views: {'edit@': {component: 'edit'}}
     });
 }

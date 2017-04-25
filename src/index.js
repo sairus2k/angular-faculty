@@ -6,6 +6,7 @@ import {city} from './app/components/city';
 import {university} from './app/components/university';
 import {faculty} from './app/components/faculty';
 import {loading} from './app/components/loading';
+import {edit} from './app/components/edit';
 import routesConfig from './routes';
 import sceConfig from './sce';
 import httpConfig from './http';
@@ -23,4 +24,5 @@ angular
   .component('city', city)
   .component('university', university)
   .component('faculty', faculty)
-  .component('loading', loading);
+  .component('loading', loading)
+  .component('edit', edit);
