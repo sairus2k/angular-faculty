@@ -13,7 +13,7 @@
 <div class="list-group">
   <a
     class="list-group-item"
-    ng-repeat="university in $ctrl.universities"
+    ng-repeat="university in $ctrl.universities | limitTo: 5"
     ui-sref="city.university.faculty({universityId: university.id})"
   >
     {{university.title}}

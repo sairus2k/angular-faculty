@@ -10,7 +10,7 @@ export function api($http) {
   };
 
   function getCities(q) {
-    return $http.jsonp(`${url}.${getCities.name}`, {
+    return $http.jsonp(`${url}.getCities`, {
       params: {
         // eslint-disable-next-line camelcase
         country_id: 1,
@@ -21,7 +21,7 @@ export function api($http) {
   }
 
   function getCitiesById(id) {
-    return $http.jsonp(`${url}.${getCitiesById.name}`, {
+    return $http.jsonp(`${url}.getCitiesById`, {
       params: {
         // eslint-disable-next-line camelcase
         city_ids: id
@@ -30,7 +30,7 @@ export function api($http) {
   }
 
   function getUniversities(q, cid) {
-    return $http.jsonp(`${url}.${getUniversities.name}`, {
+    return $http.jsonp(`${url}.getUniversities`, {
       params: {
         // eslint-disable-next-line camelcase
         country_id: 1,
@@ -42,7 +42,7 @@ export function api($http) {
   }
 
   function getFaculties(q, uid) {
-    return $http.jsonp(`${url}.${getFaculties.name}`, {
+    return $http.jsonp(`${url}.getFaculties`, {
       params: {
         // eslint-disable-next-line camelcase
         country_id: 1,

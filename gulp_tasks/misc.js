@@ -9,7 +9,7 @@ const conf = require('../conf/gulp.conf');
 
 gulp.task('clean', clean);
 gulp.task('other', other);
-gulp.task('deploy', deploy);
+gulp.task('deploy:gh-pages', deploy);
 
 function clean() {
   return del([conf.paths.dist, conf.paths.tmp]);
